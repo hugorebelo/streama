@@ -89,7 +89,7 @@ angular.module('streama')
     profileService.getUserProfiles().then(
       function(data) {
         var savedProfile = profileService.getCurrentProfile();
-        if(!savedProfile){
+        if(!savedProfile && profilesEnabled){
           $state.go('sub-profiles');
         }
         $rootScope.usersProfiles = data.data;

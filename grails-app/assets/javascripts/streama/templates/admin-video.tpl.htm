@@ -51,7 +51,7 @@
           <label>Release Date</label>
           <p class="data-display">{{video.release_date}}</p>
         </div>
-        <div class="col-sm-2">
+        <div ng-if="showIMDB" class="col-sm-2">
           <label>IMDB Link</label>
           <p class="data-display"><a href="http://www.imdb.com/title/{{video.imdb_id}}">{{video.title}}</a></p>
         </div>

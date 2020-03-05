@@ -165,7 +165,7 @@
 
   <!--   --------------- TV SHOWS ---------------------  -->
 
-  <div ng-if="!vm.isDashSectionHidden('discover-shows') && (!$root.currentProfile.isChild || vm.tvShow.list.length)">
+  <div ng-if="showsEnabled && !vm.isDashSectionHidden('discover-shows') && (!$root.currentProfile.isChild || vm.tvShow.list.length)">
     <hr/>
     <h3>
       <span ng-show="!$root.selectedGenre">{{'DASHBOARD.DISCOVER_SHOWS' | translate}}</span>

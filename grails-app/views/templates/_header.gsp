@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-nav">
       <ul class="nav navbar-nav">
         <li><a ng-click="changeDashType('home')" ng-class="{active: (isDashType('home') || isDashType(undefined))}">{{'DASHBOARD.HOME' | translate}}</a></li>
-        <li><a ng-click="changeDashType('discover-shows')" ng-class="{active: (isDashType('discover-shows'))}">{{'DASHBOARD.TV_SHOWS' | translate}}</a></li>
+        <li ng-if="showsEnabled" ><a ng-click="changeDashType('discover-shows')" ng-class="{active: (isDashType('discover-shows'))}">{{'DASHBOARD.TV_SHOWS' | translate}}</a></li>
         <li><a ng-click="changeDashType('discover-movies')" ng-class="{active: (isDashType('discover-movies'))}">{{'DASHBOARD.MOVIES' | translate}}</a></li>
         <li><a ng-click="changeDashType('watchlist')" ng-class="{active: (isDashType('watchlist'))}">{{'DASHBOARD.MY_LIST' | translate}}</a></li>
         <li class="browse-genres" ng-if="isCurrentState('dash') && genres.length && !$root.currentProfile.isChild">
@@ -66,7 +66,7 @@
       </sec:ifLoggedIn>
 
       <sec:ifAnyGranted roles="ROLE_CONTENT_MANAGER">
-        <li><a ui-sref="admin.shows">{{'MANAGE_CONTENT' | translate}}</a></li>
+        <li><a ui-sref="admin.movies">{{'MANAGE_CONTENT' | translate}}</a></li>
       </sec:ifAnyGranted>
 
       <sec:ifAnyGranted roles="ROLE_ADMIN">
@@ -97,7 +97,7 @@
                 <a ui-sref="sub-profiles">{{'MANAGE_SUB_PROFILES' | translate}}</a>
               </li>
               <li class="divider"></li>
-              <li role="menuitem"><a ui-sref="help">{{'HELP_FAQ' | translate}}</a></li>
+              <li ng-if="showHelp" role="menuitem"><a ui-sref="help">{{'HELP_FAQ' | translate}}</a></li>
               <li role="menuitem"><a ui-sref="userSettings">{{'PROFILE_SETTINGS' | translate}}</a></li>
               <li class="divider"></li>
               <li><g:link uri="/logoff">{{'LOGOUT' | translate}}</g:link></li>

@@ -13,7 +13,7 @@ angular.module('streama.translations').config(function ($translateProvider) {
       SESSION_EXPIRED: 'Sua sessão expirou desde sua última atividade. Por favor faça login novamente.'
 		},
 		DASHBOARD: {
-      HOME: 'Casa',
+      HOME: 'Home',
       TV_SHOWS: 'Programas de televisão',
       MOVIES: 'Filmes',
       MY_LIST:'Minha lista',

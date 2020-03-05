@@ -52,7 +52,7 @@
        <div ng-if="mediaType != 'episode'">
          <ul class="info-list">
            <li><strong>{{'VIDEO.RELEASED' | translate}}: </strong> {{media.release_date.substring(0,4) || media.first_air_date.substring(0,4)}}</li>
-           <li><strong>{{'VIDEO.IMDB' | translate}}: </strong>
+           <li ng-if="showIMDB"><strong>{{'VIDEO.IMDB' | translate}}: </strong>
              <a target="_blank" href="http://www.imdb.com/title/{{media.imdb_id}}">{{media.name || media.title}}</a>
            </li>
            <li><strong>{{'VIDEO.RATING' | translate}}: </strong>

@@ -162,6 +162,15 @@ class DefaultDataService {
             validationRequired: false
         ],
         [
+          settingsKey: 'Enable Shows',
+          name: 'showsEnabled',
+          description: 'Enable Shows',
+          settingsType: 'boolean',
+          value: 'false',
+          required: false,
+          validationRequired: false
+        ],
+        [
             settingsKey: 'All Users can download (otherwise only Trusted)',
             name: 'player_downloadForAllUsers',
             description: 'If the download feature is enabled, by default only users with the role "Trusted User" can download videos. With this checkmark you can allow all users to download',

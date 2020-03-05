@@ -18,8 +18,8 @@ environments:
             dbCreate: update
             driverClassName:  'com.mysql.jdbc.Driver'
             url: jdbc:mysql://localhost/streama
-            username: root
-            password:
+            username: streama
+            password: streama_password
     mysql:
         dataSource:
             dbCreate: update
