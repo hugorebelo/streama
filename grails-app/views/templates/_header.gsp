@@ -20,7 +20,7 @@
         width: 100%;
         height: 450px;
         background-size: cover;
-        background-image: url(assets/bg.jpg);
+        background-image: url(${Settings.findByName('loginBackground').value});
       }
     </style>
 

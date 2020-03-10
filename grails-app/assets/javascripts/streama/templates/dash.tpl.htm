@@ -1,6 +1,6 @@
 
 <div ng-if="!vm.isDashSectionHidden('big-header')" class="flex big-header">
-  <img class="center" src="/assets/logo.png" alt="Logo">
+  <img class="center" ng-src="{{$root.getSetting('logo').value}}" alt="Logo">
 </div>
 
 <div class="dashboard">
