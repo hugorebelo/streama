@@ -13,6 +13,17 @@
       <div class="version">v${grailsApplication.metadata.getApplicationVersion()}</div>
     </g:if>
 
+    <style>
+      .big-header {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 450px;
+        background-size: cover;
+        background-image: url(assets/bg.jpg);
+      }
+    </style>
+
     <div class="collapse navbar-collapse" id="navbar-collapse-nav">
       <ul class="nav navbar-nav">
         <li><a ng-click="changeDashType('home')" ng-class="{active: (isDashType('home') || isDashType(undefined))}">{{'DASHBOARD.HOME' | translate}}</a></li>

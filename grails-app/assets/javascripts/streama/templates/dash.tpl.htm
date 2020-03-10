@@ -1,4 +1,8 @@
 
+<div ng-if="!vm.isDashSectionHidden('big-header')" class="flex big-header">
+  <img class="center" src="/assets/logo.png" alt="Logo">
+</div>
+
 <div class="dashboard">
   <!--------------------------new releases--------------------------->
   <div ng-if="vm.newReleases.length && !$root.selectedGenre && !vm.isDashSectionHidden('new-releases')">
