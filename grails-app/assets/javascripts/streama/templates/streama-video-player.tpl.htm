@@ -183,7 +183,8 @@
     </section>
   </div>
 
-  <video ng-if="isInitialized" id="video" ng-src="{{options.videoSrc}}" type="{{options.videoType}}" ng-click="clickVideo()" class="subtitle-size-{{options.subtitleSize}}">
+  <video ng-if="isInitialized" id="video" ng-click="clickVideo()" class="subtitle-size-{{options.subtitleSize}}" autoplay playsinline>
+    <source ng-src="{{options.videoSrc}}" type="{{options.videoType}}">
     <track ng-repeat="subtitle in options.subtitles" ng-src="{{subtitle.src}}" kind="subtitles" id="subtitle-{{subtitle.id}}"
            srclang="{{subtitle.subtitleSrcLang}}" label="{{subtitle.subtitleLabel}}" src="{{subtitle.src}}">
   </video>
