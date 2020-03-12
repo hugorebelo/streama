@@ -20,9 +20,17 @@
         width: 100%;
         height: 450px;
         background-size: cover;
-        background-image: url(${Settings.findByName('loginBackground').value});
+      }
+      .big-header-logo {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
       }
     </style>
+    <g:cssBackgroundSetting selector=".big-header" setting="${Settings.findByName('loginBackground').value}"></g:cssBackgroundSetting>
+    <g:cssBackgroundSetting selector=".big-header-logo" setting="${Settings.findByName('logo').value}"></g:cssBackgroundSetting>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-nav">
       <ul class="nav navbar-nav">
