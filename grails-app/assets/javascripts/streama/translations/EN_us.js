@@ -35,7 +35,8 @@ angular.module('streama.translations').config(function ($translateProvider) {
       NO_TVSHOWS_FOUND: 'No Tv-Shows Available',
       NO_MOVIES_FOUND: 'No Movies Available',
       WATCHLIST: 'Watchlist',
-      ALL: 'All'
+      ALL: 'All',
+      LOAD_MORE: 'Load more ...'
     },
     VIDEO: {
       RELEASED: 'Released',

@@ -86,12 +86,12 @@
         </div>
 
         <div class="col-sm-12">
-          <label>Genre</label>
+          <label>{{'VIDEO.GENRE' | translate}}</label>
           <ul class="genre-list">
             <li class="genre-tag interactive" ng-repeat="genre in movie.genre" ui-sref="dash({genreId: genre.id})">
               {{genre.name}}
-            </li>
           </ul>
+          </li>
           <p ng-show="!movie.genre.length" class="data-display fade-50">No genre added yet</p>
         </div>
         <div class="col-sm-12" ng-if="movie.trailer">

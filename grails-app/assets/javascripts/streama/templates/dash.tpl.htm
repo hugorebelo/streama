@@ -242,7 +242,6 @@
     <hr/>
     <h3>
       <span ng-show="!selectedGenre">{{'DASHBOARD.DISCOVER_MOVIES' | translate}}</span>
-      <span ng-show="selectedGenre">{{::selectedGenre.name}}</span>
      </h3>
 
     <div class="row dash-filter" ng-hide="!vm.movie.filter && !vm.movie.list.length">
@@ -281,28 +280,38 @@
     </p>
 
     <div class="media-list">
-      <div class="media-list-item media-poster-item" ng-repeat="movie in vm.movie.list | orderBy:vm.movie.sorter.sort |filter: vm.movie.filter.execute">
-        <div class="media-item" >
 
-          <streama-video-image type="poster" size="300" video="movie"></streama-video-image>
+      <div ng-repeat="genre in ::genres" ng-show="vm.movie.list.length">
 
-          <div class="play-text">
-            <h4 ng-bind="::movie.title"></h4>
-            <p ng-bind="::movie.release_date.substring(0,4)"></p>
+          <h3 ng-bind="::genre.name"></h3>
+          <div class="media-list-item media-poster-item" ng-repeat="movie in vm.movie.list | orderBy:vm.movie.sorter.sort |filter: vm.movie.filter.execute |filter:{$: genre.name}">
+            <div class="media-item" >
+
+              <streama-video-image type="poster" size="300" video="movie"></streama-video-image>
+
+              <div class="play-text">
+                <h4 ng-bind="::movie.title"></h4>
+                <p ng-bind="::movie.release_date.substring(0,4)"></p>
+              </div>
+              <div>
+                <i ng-class="movie.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
+                   ng-click="vm.handleWatchlistUpdate(movie.inWatchlist ? 'removed' : 'added', movie)"></i>
+              </div>
+
+              <i class="info-icon ion-ios-information" ng-click="vm.showDetails(movie)"></i>
+              <a class="play-icon ion-ios-play" ui-sref="player({videoId: movie.id})"></a>
+            </div>
           </div>
-          <div>
-            <i ng-class="movie.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
-               ng-click="vm.handleWatchlistUpdate(movie.inWatchlist ? 'removed' : 'added', movie)"></i>
-          </div>
-
-          <i class="info-icon ion-ios-information" ng-click="vm.showDetails(movie)"></i>
-          <a class="play-icon ion-ios-play" ui-sref="player({videoId: movie.id})"></a>
-        </div>
+          <hr>
       </div>
+
     </div>
 
+
+
+
     <div class="text-center" ng-if="vm.movie.total > vm.movie.list.length">
-      <button class="btn btn-primary btn-outline" ng-click="vm.movie.loadMore()">Load more ...</button>
+      <button class="btn btn-primary btn-outline" ng-click="vm.movie.loadMore()">{{'DASHBOARD.LOAD_MORE' | translate}}</button>
     </div>
   </div>
 

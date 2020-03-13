@@ -35,7 +35,8 @@ angular.module('streama.translations').config(function ($translateProvider) {
 			NO_TVSHOWS_FOUND: 'Nenhuma Série Disponível',
 			NO_MOVIES_FOUND: 'Nenhum Filme Disponível',
       WATCHLIST: 'ver mais tarde',
-      ALL: 'Todas'
+      ALL: 'Todas',
+      LOAD_MORE: 'Carregar mais ...'
 		},
 		VIDEO: {
 			RELEASED: 'Lançamento',
