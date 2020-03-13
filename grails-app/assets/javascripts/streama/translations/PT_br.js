@@ -25,14 +25,17 @@ angular.module('streama.translations').config(function ($translateProvider) {
 			DISCOVER_MOVIES: 'Descubra Vídeos',
 			DISCOVER_OTHER_VIDEOS: 'Descubra outros vídeos',
 			SORT: 'Ordenar:',
+      SEARCH_CONTENT: 'Buscar conteúdo...',
 			SEARCH_BY_NAME: 'Pesquisar por Nome...',
 			FILTER_BY_TAG: 'Filtrar por Tag...',
+      FILTER_BY_GENRE: 'Disciplinas...',
 			BROWSE_GENRES: 'Navegar',
-			LOOKING_AT_GENRE: 'Você está vendo o gênero:',
+			LOOKING_AT_GENRE: 'Você está vendo a disciplina:',
 			MARK_COMPLETED: 'Concluído',
 			NO_TVSHOWS_FOUND: 'Nenhuma Série Disponível',
 			NO_MOVIES_FOUND: 'Nenhum Filme Disponível',
-      WATCHLIST: 'ver mais tarde'
+      WATCHLIST: 'ver mais tarde',
+      ALL: 'Todas'
 		},
 		VIDEO: {
 			RELEASED: 'Lançamento',
@@ -40,7 +43,7 @@ angular.module('streama.translations').config(function ($translateProvider) {
 			RATING: 'Classificação',
 			VOTES: 'Votos',
 			OVERVIEW: 'Sinopse',
-			GENRE: 'Gênero',
+			GENRE: 'Disciplinas',
 			TRAILER: 'Trailer',
 			SEASON: 'Temporada',
       NO_SUBTITLE: 'Sem legenda',

@@ -108,7 +108,7 @@ class DashController {
 
     def movies = Movie.where{
       deleted != true
-      title =~ "%${query}%"
+      overview =~ "%${query}%"
     }.list()
 
     def tvShows = TvShow.where{

@@ -25,15 +25,17 @@ angular.module('streama.translations').config(function ($translateProvider) {
       DISCOVER_MOVIES: 'Discover Movies',
       DISCOVER_OTHER_VIDEOS: 'Discover other videos',
       SORT: 'Sort:',
+      SEARCH_CONTENT: 'Search content...',
       SEARCH_BY_NAME: 'Search by Name...',
       FILTER_BY_TAG: 'Filter by Tag...',
-      FILTER_BY_GENRE: 'Filter by Genre...',
+      FILTER_BY_GENRE: 'Filter by Subject...',
       BROWSE_GENRES: 'Browse Genre',
       LOOKING_AT_GENRE: 'You\'re looking at the genre:',
       MARK_COMPLETED: 'Mark completed',
       NO_TVSHOWS_FOUND: 'No Tv-Shows Available',
       NO_MOVIES_FOUND: 'No Movies Available',
-      WATCHLIST: 'Watchlist'
+      WATCHLIST: 'Watchlist',
+      ALL: 'All'
     },
     VIDEO: {
       RELEASED: 'Released',
@@ -41,7 +43,7 @@ angular.module('streama.translations').config(function ($translateProvider) {
       RATING: 'Rating',
       VOTES: 'Votes',
       OVERVIEW: 'Overview',
-      GENRE: 'Genre',
+      GENRE: 'Subject',
       TRAILER: 'Trailer',
       SEASON: 'Season',
       SUBTITLES: 'Subtitles',
