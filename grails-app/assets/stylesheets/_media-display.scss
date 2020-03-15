@@ -3,6 +3,11 @@
   margin-right: -15px;
 }
 
+.custom-media-list{
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 
 
@@ -17,6 +22,11 @@
   .media-item{
     margin: 0 -12px;
   }
+}
+
+.custom-media-list-item{
+  display: inline-block;
+  float: none;
 }
 
 .media-poster-item{
