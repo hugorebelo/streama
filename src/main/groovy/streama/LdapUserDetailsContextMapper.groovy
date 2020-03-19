@@ -16,7 +16,7 @@ class LdapUserDetailsContextMapper implements UserDetailsContextMapper {
         // load the user or create a default profile
         User user = User.findByUsername(username)
         if(!user) {
-            user = new User(username: username, enabled: true)
+            user = new User(username: username, enabled: true, language: 'pt')
             user.save flush: true, failOnError: true
         }
 
