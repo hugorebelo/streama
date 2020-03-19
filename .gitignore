@@ -53,3 +53,7 @@
 /.jruby-container
 /.sass-cache
 /.sass-work
+
+
+/application.yml
+/.application.yml.swp
