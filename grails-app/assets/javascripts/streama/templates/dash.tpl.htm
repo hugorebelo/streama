@@ -19,7 +19,7 @@
         <div class="image-background" style="background-image: url('https://image.tmdb.org/t/p/w1280/{{newRelease.media.backdrop_path}}')">
 
           <div>
-            <i ng-class="newRelease.media.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
+            <i ng-if="!vm.isDashSectionHidden('watchlist')" ng-class="newRelease.media.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
                ng-click="vm.handleWatchlistUpdate(newRelease.media.inWatchlist ? 'removed' : 'added', newRelease.media)"></i>
           </div>
 
@@ -104,7 +104,7 @@
             <p ng-show="video.isEpisode"><span ng-bind="::video.episodeString"></span></p>
           </div>
           <div>
-            <i ng-class="video.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
+            <i ng-if="!vm.isDashSectionHidden('watchlist')" ng-class="video.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
                ng-click="vm.handleWatchlistUpdate(video.inWatchlist ? 'removed' : 'added', video)"></i>
           </div>
 
@@ -220,7 +220,7 @@
           </div>
 
           <div>
-            <i ng-class="tvShow.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
+            <i ng-if="!vm.isDashSectionHidden('watchlist')" ng-class="tvShow.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
                ng-click="vm.handleWatchlistUpdate(tvShow.inWatchlist ? 'removed' : 'added', tvShow)"></i>
           </div>
 
@@ -306,7 +306,7 @@
                   <p ng-bind="::movie.release_date.substring(0,4)"></p>
                 </div>
                 <div>
-                  <i ng-class="movie.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
+                  <i ng-if="!vm.isDashSectionHidden('watchlist')" ng-class="movie.inWatchlist ? 'remove-icon ion-android-remove-circle' : 'add-icon ion-android-add-circle'"
                      ng-click="vm.handleWatchlistUpdate(movie.inWatchlist ? 'removed' : 'added', movie)"></i>
                 </div>
 
