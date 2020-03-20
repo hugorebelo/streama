@@ -94,7 +94,7 @@ angular.module('streama')
         }
         $rootScope.usersProfiles = data.data;
         $rootScope.currentProfile = savedProfile || $rootScope.usersProfiles[0];
-        $translate.use(_.get($rootScope, 'currentProfile.profileLanguage') || _.get($rootScope, 'currentUser.language') || 'en')
+        $translate.use(_.get($rootScope, 'currentProfile.profileLanguage') || _.get($rootScope, 'currentUser.language') || 'pt')
       });
     $rootScope.setCurrentSubProfile = profileService.setCurrentProfile;
   }

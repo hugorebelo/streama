@@ -1,6 +1,6 @@
 <%@ page import="streama.Settings" %>
 <!doctype html>
-<html lang="en" class="no-js" ng-app="streama">
+<html lang="pt" class="no-js" ng-app="streama">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>

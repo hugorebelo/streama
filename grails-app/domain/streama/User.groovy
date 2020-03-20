@@ -23,7 +23,7 @@ class User {
 	boolean invitationSent = false
 	boolean pauseVideoOnClick = true
 	String uuid
-	String language = 'en'
+	String language = 'pt'
   String fullName
   Integer amountOfMediaEntries
 

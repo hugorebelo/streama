@@ -5,7 +5,7 @@ angular.module('streama').controller('subProfilesCtrl',
 
     $scope.profile = {
       profileName: '',
-      profileLanguage: 'en',
+      profileLanguage: 'pt',
       isChild: false,
       avatarColor: '0b74b2'
     };
@@ -44,7 +44,7 @@ angular.module('streama').controller('subProfilesCtrl',
       $scope.isCreateProfile = !$scope.isCreateProfile;
       $scope.profile = {
         profileName: '',
-        profileLanguage: 'en',
+        profileLanguage: 'pt',
         isChild: false,
         avatarColor: '0b74b2'
       }
