@@ -16,7 +16,7 @@ class BootStrap {
         migrationService.importMovieDbGenres()
         defaultDataService.createDefaultSettings()
         migrationService.setDefaultDeletedFlag()
-        migrationService.setTrailerForMovies()
+        //migrationService.setTrailerForMovies()
         migrationService.addGenresToMoviesAndShows()
         migrationService.setTheMovieDBKey()
         migrationService.fixLogoValue()   //2017-03-04
